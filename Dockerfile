@@ -13,7 +13,7 @@ RUN set -x \
     && curl --silent https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash \
     && apt-get install --quiet --yes --no-install-recommends git-lfs \
     && git lfs install \
-    && apt-get install --quiet --yes --no-install-recommends -t jessie-backports libtcnative-1 \
+    && apt-get install --quiet --yes --no-install-recommends libtcnative-1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p               "${BAMBOO_HOME}/lib" \
